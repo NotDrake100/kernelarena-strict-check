@@ -11,7 +11,7 @@ bad_fixed=[r for r in G if not r['strict_fixed']['passed']]
 ok=[r for r in G if r['strict_fixed']['passed'] and r['strict_inplace']['passed']]
 n=len(G); nchk=G[0]['strict_fixed']['n_checks']
 f3=lambda x:f'{x:.3g}'
-rows='\n'.join(f"| {lab(r)} | {'pass' if r['claimed']['passed'] else 'fail'} | {r['claimed']['speedup']} | {'pass' if r['strict_fixed']['passed'] else 'FAIL'} ({r['strict_fixed']['n_failures']}/{r['strict_fixed']['n_checks']} failed) | {'pass' if r['strict_inplace']['passed'] else 'FAIL'} ({r['strict_inplace']['n_failures']}/{r['strict_inplace']['n_checks']} failed, max err {f3(r['strict_inplace']['max_abs_err_max'])}) | {r['timing_ms']['measured_speedup']:.2f}x | {r['port_note']} |" for r in G)
+rows='\n'.join(f"| {lab(r)} | {'pass' if r['claimed']['passed'] else 'fail'} | {'pass' if r['strict_fixed']['passed'] else 'FAIL'} ({r['strict_fixed']['n_failures']}/{r['strict_fixed']['n_checks']} failed) | {'pass' if r['strict_inplace']['passed'] else 'FAIL'} ({r['strict_inplace']['n_failures']}/{r['strict_inplace']['n_checks']} failed, max err {f3(r['strict_inplace']['max_abs_err_max'])}) | {r['port_note']} |" for r in G)
 g98=[r for r in G if r['task'].startswith('level2_98')]
 g98s=[r['timing_ms']['measured_speedup'] for r in g98]; g98c=[r['claimed']['speedup'] for r in g98]
 mg=[r for r in G if r['task'].startswith('level3_44')][0]
@@ -47,8 +47,8 @@ it was replaced by a PyTorch stand-in with the same formula, copied from the HIP
 
 ## Results ({GPU})
 
-| Submission | Leaderboard | Leaderboard speedup (MI300X) | Strict, fixed weights | Strict, in-place updates | Measured speedup on {GPU} | What ran |
-|---|---|---|---|---|---|---|
+| Submission | Leaderboard | Strict, fixed weights | Strict, in-place updates | What ran |
+|---|---|---|---|---|
 {rows}
 
 ![pass/fail](charts/pass_fail.png)
@@ -63,22 +63,26 @@ it was replaced by a PyTorch stand-in with the same formula, copied from the HIP
 
 **Clean: {len(ok)} of {n}** pass both strict modes.
 
-### Where the speedup comes from
-
-![timing](charts/timing.png)
-
-- `level2_98` (Matmul + AvgPool + GELU + Scale + Max): leaderboard {min(g98c)}–{max(g98c)}x. On {GPU}, with the HIP kernel
-  replaced by plain PyTorch (or absent), the submissions are still {min(g98s):.1f}–{max(g98s):.1f}x faster than the reference.
-  So on this GPU the speedup comes from an algebraic rewrite (averaging the Linear weights in groups of 16, so the matmul is 16x smaller), not from the custom kernel. This rewrite is exactly what gets cached and goes stale.
-- `level3_44_MiniGPTBlock` / `gpt_5.2`: leaderboard {mg['claimed']['speedup']}x. With its only HIP kernel (GELU) replaced by PyTorch, the rest of the file (which uses PyTorch SDPA) gives {mg['timing_ms']['measured_speedup']:.2f}x on {GPU}.
-- `level3_43` SDPA submissions: leaderboard {', '.join(str(r['claimed']['speedup']) for r in sd)}x, measured {', '.join(f"{r['timing_ms']['measured_speedup']:.2f}" for r in sd)}x on {GPU}, entirely from PyTorch's built-in attention.
-
 ### FP8 input path that never rounds to FP8 (reproduction)
 
 In `level4_104_FP8_Matmul` / `opus_4.5`, the HIP function `fast_fp8_quant_dequant_hip` scales, clamps and unscales in fp16
 but never casts to an FP8 type, so the input is returned unchanged. Reproducing that math in PyTorch at {REPRO[0]['shape']} on {GPU} and comparing to real FP8
 quantize-dequantize gives max error {rmin:.3f}–{rmax:.3f} (relative error {rel*100:.2f}%) over {len(REPRO)} seeds; it fails allclose at both 1e-3 and 1e-2.
 This is a reproduction of the HIP math, not the HIP kernel itself.
+
+## Timing: NOT comparable to the leaderboard (different hardware)
+
+**Do not compare these numbers with the leaderboard speedups.** The leaderboard was timed on AMD MI300X with the real HIP kernels.
+These timings are from {GPU}, where HIP code could not run: some HIP functions were replaced by PyTorch stand-ins,
+one submission ran its own PyTorch fallback, and `torch.compile` fell back to eager for FP8. They only describe how the non-HIP
+parts of each file behave on this NVIDIA GPU, and are not a measure of the submissions' real speed. An earlier version of this
+README plotted them next to the leaderboard numbers; that chart was removed because the comparison was misleading.
+
+Median of 10 runs after 3 warm-ups, CUDA events, ms:
+
+| Submission | Reference (ms) | Submission as run here (ms) | Ratio on {GPU} | What ran |
+|---|---|---|---|---|
+""" + '\n'.join(f"| {lab(r)} | {r['timing_ms']['reference']:.2f} | {r['timing_ms']['modelnew']:.2f} | {r['timing_ms']['measured_speedup']:.2f}x | {r['port_note']} |" for r in G) + f"""
 
 ## The fix
 

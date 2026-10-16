@@ -27,24 +27,24 @@ it was replaced by a PyTorch stand-in with the same formula, copied from the HIP
 
 ## Results (NVIDIA A100-SXM4-40GB)
 
-| Submission | Leaderboard | Leaderboard speedup (MI300X) | Strict, fixed weights | Strict, in-place updates | Measured speedup on NVIDIA A100-SXM4-40GB | What ran |
-|---|---|---|---|---|---|---|
-| `level1_9_Tall_skinny_matrix_multiplication_` / `gpt_5.2_min` | pass | 0.03 | pass (0/9 failed) | pass (0/9 failed, max err 0) | 0.86x | pure PyTorch |
-| `level2_40_Matmul_Scaling_ResidualAdd` / `grok_4.1` | pass | 1.3 | pass (0/27 failed) | pass (0/27 failed, max err 0) | 1.01x | pure PyTorch |
-| `level2_40_Matmul_Scaling_ResidualAdd` / `opus_4.5_min` | pass | 1.58 | pass (0/27 failed) | pass (0/27 failed, max err 0) | 1.03x | pure PyTorch |
-| `level2_55_Matmul_MaxPool_Sum_Scale` / `grok_4.1_min` | pass | 1 | pass (0/27 failed) | pass (0/27 failed, max err 0) | 1.00x | pure PyTorch |
-| `level2_73_Conv2d_BatchNorm_Scaling` / `gemini_3_flash` | pass | 1.54 | pass (0/27 failed) | FAIL (24/27 failed, max err 26.5) | 1.28x | pure PyTorch |
-| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gemini_3_flash` | pass | 9.3 | pass (0/27 failed) | FAIL (24/27 failed, max err 5.84) | 13.57x | HIP post_matmul_fused_hip replaced by PyTorch stand-in (erf GELU*scale, max over dim 1); Python weight-cache logic unchanged |
-| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gpt_5.2` | pass | 9.5 | pass (0/27 failed) | FAIL (24/27 failed, max err 5.84) | 10.04x | HIP gelu_scale_max_hip replaced by PyTorch stand-in (erf GELU*scale, max over dim 1); Python weight-cache logic unchanged |
-| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gpt_5.2_min` | pass | 9.47 | pass (0/27 failed) | FAIL (24/27 failed, max err 5.84) | 9.89x | HIP gelu_scale_max replaced by PyTorch stand-in (tanh GELU as in the HIP source); Python weight-cache logic unchanged |
-| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `grok_4.1_min` | pass | 8.88 | pass (0/27 failed) | FAIL (24/27 failed, max err 5.84) | 10.18x | pure PyTorch |
-| `level3_43_MinGPTCausalAttention` / `grok_4.1_min` | pass | 1.7 | pass (0/27 failed) | pass (0/27 failed, max err 9.35e-05) | 1.56x | pure PyTorch (SDPA) |
-| `level3_43_MinGPTCausalAttention` / `kimi_k2` | pass | 0.42 | FAIL (27/27 failed) | FAIL (27/27 failed, max err 0.584) | 1.06x | pure PyTorch |
-| `level3_43_MinGPTCausalAttention` / `opus_4.5` | pass | 1.71 | pass (0/27 failed) | pass (0/27 failed, max err 9.35e-05) | 1.56x | pure PyTorch (SDPA) |
-| `level3_43_MinGPTCausalAttention` / `opus_4.5_min` | pass | 1.69 | pass (0/27 failed) | pass (0/27 failed, max err 9.35e-05) | 1.48x | pure PyTorch (SDPA) |
-| `level3_44_MiniGPTBlock` / `gpt_5.2` | pass | 27.33 | pass (0/27 failed) | pass (0/27 failed, max err 0.000851) | 1.17x | HIP new_gelu_forward replaced by PyTorch NewGELU stand-in (same tanh formula); attention is SDPA as submitted |
-| `level4_104_FP8_Matmul` / `gemini_3_flash` | pass | 1.16 | pass (0/27 failed) | pass (0/27 failed, max err 0.000187) | 1.02x | torch.compile as submitted; reference ASSUMED; A100 has no FP8 Triton support, so torch.compile falls back to eager (suppress_errors=True) |
-| `level4_104_FP8_Matmul` / `opus_4.5` | pass | 1.14 | pass (0/27 failed) | FAIL (24/27 failed, max err 59.4) | 1.02x | HIP input-quant extension not built, so the file's own PyTorch fallback runs; weight-cache code unchanged; reference ASSUMED |
+| Submission | Leaderboard | Strict, fixed weights | Strict, in-place updates | What ran |
+|---|---|---|---|---|
+| `level1_9_Tall_skinny_matrix_multiplication_` / `gpt_5.2_min` | pass | pass (0/9 failed) | pass (0/9 failed, max err 0) | pure PyTorch |
+| `level2_40_Matmul_Scaling_ResidualAdd` / `grok_4.1` | pass | pass (0/27 failed) | pass (0/27 failed, max err 0) | pure PyTorch |
+| `level2_40_Matmul_Scaling_ResidualAdd` / `opus_4.5_min` | pass | pass (0/27 failed) | pass (0/27 failed, max err 0) | pure PyTorch |
+| `level2_55_Matmul_MaxPool_Sum_Scale` / `grok_4.1_min` | pass | pass (0/27 failed) | pass (0/27 failed, max err 0) | pure PyTorch |
+| `level2_73_Conv2d_BatchNorm_Scaling` / `gemini_3_flash` | pass | pass (0/27 failed) | FAIL (24/27 failed, max err 26.5) | pure PyTorch |
+| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gemini_3_flash` | pass | pass (0/27 failed) | FAIL (24/27 failed, max err 5.84) | HIP post_matmul_fused_hip replaced by PyTorch stand-in (erf GELU*scale, max over dim 1); Python weight-cache logic unchanged |
+| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gpt_5.2` | pass | pass (0/27 failed) | FAIL (24/27 failed, max err 5.84) | HIP gelu_scale_max_hip replaced by PyTorch stand-in (erf GELU*scale, max over dim 1); Python weight-cache logic unchanged |
+| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gpt_5.2_min` | pass | pass (0/27 failed) | FAIL (24/27 failed, max err 5.84) | HIP gelu_scale_max replaced by PyTorch stand-in (tanh GELU as in the HIP source); Python weight-cache logic unchanged |
+| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `grok_4.1_min` | pass | pass (0/27 failed) | FAIL (24/27 failed, max err 5.84) | pure PyTorch |
+| `level3_43_MinGPTCausalAttention` / `grok_4.1_min` | pass | pass (0/27 failed) | pass (0/27 failed, max err 9.35e-05) | pure PyTorch (SDPA) |
+| `level3_43_MinGPTCausalAttention` / `kimi_k2` | pass | FAIL (27/27 failed) | FAIL (27/27 failed, max err 0.584) | pure PyTorch |
+| `level3_43_MinGPTCausalAttention` / `opus_4.5` | pass | pass (0/27 failed) | pass (0/27 failed, max err 9.35e-05) | pure PyTorch (SDPA) |
+| `level3_43_MinGPTCausalAttention` / `opus_4.5_min` | pass | pass (0/27 failed) | pass (0/27 failed, max err 9.35e-05) | pure PyTorch (SDPA) |
+| `level3_44_MiniGPTBlock` / `gpt_5.2` | pass | pass (0/27 failed) | pass (0/27 failed, max err 0.000851) | HIP new_gelu_forward replaced by PyTorch NewGELU stand-in (same tanh formula); attention is SDPA as submitted |
+| `level4_104_FP8_Matmul` / `gemini_3_flash` | pass | pass (0/27 failed) | pass (0/27 failed, max err 0.000187) | torch.compile as submitted; reference ASSUMED; A100 has no FP8 Triton support, so torch.compile falls back to eager (suppress_errors=True) |
+| `level4_104_FP8_Matmul` / `opus_4.5` | pass | pass (0/27 failed) | FAIL (24/27 failed, max err 59.4) | HIP input-quant extension not built, so the file's own PyTorch fallback runs; weight-cache code unchanged; reference ASSUMED |
 
 ![pass/fail](charts/pass_fail.png)
 
@@ -63,22 +63,41 @@ it was replaced by a PyTorch stand-in with the same formula, copied from the HIP
 
 **Clean: 9 of 16** pass both strict modes.
 
-### Where the speedup comes from
-
-![timing](charts/timing.png)
-
-- `level2_98` (Matmul + AvgPool + GELU + Scale + Max): leaderboard 8.88–9.5x. On NVIDIA A100-SXM4-40GB, with the HIP kernel
-  replaced by plain PyTorch (or absent), the submissions are still 9.9–13.6x faster than the reference.
-  So on this GPU the speedup comes from an algebraic rewrite (averaging the Linear weights in groups of 16, so the matmul is 16x smaller), not from the custom kernel. This rewrite is exactly what gets cached and goes stale.
-- `level3_44_MiniGPTBlock` / `gpt_5.2`: leaderboard 27.33x. With its only HIP kernel (GELU) replaced by PyTorch, the rest of the file (which uses PyTorch SDPA) gives 1.17x on NVIDIA A100-SXM4-40GB.
-- `level3_43` SDPA submissions: leaderboard 1.7, 1.71, 1.69x, measured 1.56, 1.56, 1.48x on NVIDIA A100-SXM4-40GB, entirely from PyTorch's built-in attention.
-
 ### FP8 input path that never rounds to FP8 (reproduction)
 
 In `level4_104_FP8_Matmul` / `opus_4.5`, the HIP function `fast_fp8_quant_dequant_hip` scales, clamps and unscales in fp16
 but never casts to an FP8 type, so the input is returned unchanged. Reproducing that math in PyTorch at [16384, 4096, 4096] on NVIDIA A100-SXM4-40GB and comparing to real FP8
 quantize-dequantize gives max error 0.194–0.201 (relative error 2.66%) over 3 seeds; it fails allclose at both 1e-3 and 1e-2.
 This is a reproduction of the HIP math, not the HIP kernel itself.
+
+## Timing: NOT comparable to the leaderboard (different hardware)
+
+**Do not compare these numbers with the leaderboard speedups.** The leaderboard was timed on AMD MI300X with the real HIP kernels.
+These timings are from NVIDIA A100-SXM4-40GB, where HIP code could not run: some HIP functions were replaced by PyTorch stand-ins,
+one submission ran its own PyTorch fallback, and `torch.compile` fell back to eager for FP8. They only describe how the non-HIP
+parts of each file behave on this NVIDIA GPU, and are not a measure of the submissions' real speed. An earlier version of this
+README plotted them next to the leaderboard numbers; that chart was removed because the comparison was misleading.
+
+Median of 10 runs after 3 warm-ups, CUDA events, ms:
+
+| Submission | Reference (ms) | Submission as run here (ms) | Ratio on NVIDIA A100-SXM4-40GB | What ran |
+|---|---|---|---|---|
+| `level1_9_Tall_skinny_matrix_multiplication_` / `gpt_5.2_min` | 4.45 | 5.17 | 0.86x | pure PyTorch |
+| `level2_40_Matmul_Scaling_ResidualAdd` / `grok_4.1` | 33.70 | 33.32 | 1.01x | pure PyTorch |
+| `level2_40_Matmul_Scaling_ResidualAdd` / `opus_4.5_min` | 33.71 | 32.73 | 1.03x | pure PyTorch |
+| `level2_55_Matmul_MaxPool_Sum_Scale` / `grok_4.1_min` | 18.17 | 18.18 | 1.00x | pure PyTorch |
+| `level2_73_Conv2d_BatchNorm_Scaling` / `gemini_3_flash` | 6.43 | 5.01 | 1.28x | pure PyTorch |
+| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gemini_3_flash` | 9.18 | 0.68 | 13.57x | HIP post_matmul_fused_hip replaced by PyTorch stand-in (erf GELU*scale, max over dim 1); Python weight-cache logic unchanged |
+| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gpt_5.2` | 9.69 | 0.96 | 10.04x | HIP gelu_scale_max_hip replaced by PyTorch stand-in (erf GELU*scale, max over dim 1); Python weight-cache logic unchanged |
+| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `gpt_5.2_min` | 10.06 | 1.02 | 9.89x | HIP gelu_scale_max replaced by PyTorch stand-in (tanh GELU as in the HIP source); Python weight-cache logic unchanged |
+| `level2_98_Matmul_AvgPool_GELU_Scale_Max` / `grok_4.1_min` | 9.39 | 0.92 | 10.18x | pure PyTorch |
+| `level3_43_MinGPTCausalAttention` / `grok_4.1_min` | 33.17 | 21.30 | 1.56x | pure PyTorch (SDPA) |
+| `level3_43_MinGPTCausalAttention` / `kimi_k2` | 33.16 | 31.35 | 1.06x | pure PyTorch |
+| `level3_43_MinGPTCausalAttention` / `opus_4.5` | 33.18 | 21.30 | 1.56x | pure PyTorch (SDPA) |
+| `level3_43_MinGPTCausalAttention` / `opus_4.5_min` | 33.18 | 22.35 | 1.48x | pure PyTorch (SDPA) |
+| `level3_44_MiniGPTBlock` / `gpt_5.2` | 81.42 | 69.69 | 1.17x | HIP new_gelu_forward replaced by PyTorch NewGELU stand-in (same tanh formula); attention is SDPA as submitted |
+| `level4_104_FP8_Matmul` / `gemini_3_flash` | 34.09 | 33.47 | 1.02x | torch.compile as submitted; reference ASSUMED; A100 has no FP8 Triton support, so torch.compile falls back to eager (suppress_errors=True) |
+| `level4_104_FP8_Matmul` / `opus_4.5` | 34.09 | 33.44 | 1.02x | HIP input-quant extension not built, so the file's own PyTorch fallback runs; weight-cache code unchanged; reference ASSUMED |
 
 ## The fix
 
