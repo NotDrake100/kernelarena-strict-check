@@ -6,11 +6,11 @@ Can AI write GPU kernels that are both faster and still correct? [KernelArena](h
 
 ## The problem
 
-Some entries save a copy of the weights once and keep reusing it. That is fine until the weights are updated in place, for example during training or when new weights are loaded. The entry doesn't notice the change, keeps using its old copy, and gives wrong answers.
+Some entries save a copy of the weights once and keep reusing the saved copy. Reusing the saved copy works until the weights are updated in place, for example during training or when new weights are loaded. The entry doesn't notice the weight change, keeps using its old copy, and gives wrong answers.
 
-The normal check never sees this, because it runs with the same weights the whole time.
+The normal check never sees the stale copy, because the normal check runs with the same weights the whole time.
 
-## How we found it
+## How we found the stale copies
 
 We wrote a stricter check that changes the weights between calls and compares the output again each time.
 
@@ -18,7 +18,7 @@ Of the 16 entries we tested, 6 passed every normal check and then failed once th
 
 ![Pass and fail for each entry](charts/pass_fail.png)
 
-This chart shows how big the error gets after the weights change. With the weights left alone the error is tiny. After the change it jumps to between 5.8 and 59.
+The second chart shows how big the error gets after the weights change. With the weights left alone the error is tiny. After the weight change the error jumps to between 5.8 and 59.
 
 ![Error after the weights change](charts/stale_cache_error.png)
 
@@ -26,9 +26,9 @@ This chart shows how big the error gets after the weights change. With the weigh
 
 The fix is to refresh the saved weights whenever they change.
 
-## What this shows
+## What the strict check shows
 
-The normal check missed this flaw. This kind of bug, where a kernel keeps old state and only breaks when something changes between calls, can be found with stricter checks like this one, and the same approach can be taken further across the leaderboard.
+KernelArena's normal check missed the stale-copy flaw. Bugs where a kernel keeps old state and only breaks when something changes between calls can be found with a stricter check that changes the weights between calls. The next step is to run the strict check across every KernelArena level and build it into the pipeline that scores new submissions, so a kernel with a stale copy can never reach the leaderboard.
 
 ## Timing: NOT comparable
 
