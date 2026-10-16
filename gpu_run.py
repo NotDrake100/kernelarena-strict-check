@@ -22,6 +22,8 @@ def fake_load_inline(name=None,*a,functions=None,cuda_sources='',cpp_sources='',
     if fns and all(f in STANDINS for f in fns): return types.SimpleNamespace(**{f:STANDINS[f] for f in fns})
     raise RuntimeError(f'HIP extension {name} not compiled on this platform (functions={fns})')
 def load(path):
+    if not hasattr(torch.backends,'miopen'):   # compatibility shim: CUDA builds of PyTorch have no torch.backends.miopen
+        torch.backends.miopen=types.SimpleNamespace(benchmark=False)
     env=os.environ.copy(); orig=cppext.load_inline; cppext.load_inline=fake_load_inline; buf=io.StringIO()
     try:
         with contextlib.redirect_stdout(buf),contextlib.redirect_stderr(buf):
@@ -77,6 +79,9 @@ def main():
     for (task,model,ref,P,pm,note) in CASES:
         key=f'{task}__{model}'
         if a.only and a.only not in key: continue
+        if task.startswith('level4_104') and model=='gemini_3_flash':
+            importlib.import_module('torch._dynamo').config.suppress_errors=True   # A100 (sm80) has no FP8 Triton codegen -> eager fallback
+            note=note+'; A100 has no FP8 Triton support, so torch.compile falls back to eager (suppress_errors=True)'
         rec={'task':task,'model':model,'reference':ref,'port_note':note,'claimed':claimed.get((task,model))}; t0=time.time()
         try:
             mod,log=load(f'{a.sol}/{task}/{model}/kernel.py'); rec['load_log_tail']=log; New=mod.ModelNew

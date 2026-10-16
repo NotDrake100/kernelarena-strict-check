@@ -1,0 +1,74 @@
+[
+ {
+  "seed": 0,
+  "shape": [
+   128,
+   256,
+   128
+  ],
+  "input_identity_maxdiff": 0.0,
+  "max_abs_err": 0.040275558829307556,
+  "allclose_1e3": false,
+  "allclose_1e2": false
+ },
+ {
+  "seed": 0,
+  "shape": [
+   1024,
+   4096,
+   4096
+  ],
+  "input_identity_maxdiff": 0.0,
+  "max_abs_err": 0.16927096247673035,
+  "allclose_1e3": false,
+  "allclose_1e2": false
+ },
+ {
+  "seed": 1,
+  "shape": [
+   128,
+   256,
+   128
+  ],
+  "input_identity_maxdiff": 0.0,
+  "max_abs_err": 0.039349690079689026,
+  "allclose_1e3": false,
+  "allclose_1e2": false
+ },
+ {
+  "seed": 1,
+  "shape": [
+   1024,
+   4096,
+   4096
+  ],
+  "input_identity_maxdiff": 0.0,
+  "max_abs_err": 0.1729445457458496,
+  "allclose_1e3": false,
+  "allclose_1e2": false
+ },
+ {
+  "seed": 2,
+  "shape": [
+   128,
+   256,
+   128
+  ],
+  "input_identity_maxdiff": 0.0,
+  "max_abs_err": 0.03709280490875244,
+  "allclose_1e3": false,
+  "allclose_1e2": false
+ },
+ {
+  "seed": 2,
+  "shape": [
+   1024,
+   4096,
+   4096
+  ],
+  "input_identity_maxdiff": 0.0,
+  "max_abs_err": 0.17693185806274414,
+  "allclose_1e3": false,
+  "allclose_1e2": false
+ }
+]

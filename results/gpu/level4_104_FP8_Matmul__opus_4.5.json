@@ -1,0 +1,122 @@
+{
+ "task": "level4_104_FP8_Matmul",
+ "model": "opus_4.5",
+ "reference": "ASSUMED_RefFP8",
+ "port_note": "HIP input-quant extension not built, so the file's own PyTorch fallback runs; weight-cache code unchanged; reference ASSUMED",
+ "claimed": {
+  "task": "level4_104_FP8_Matmul",
+  "model": "opus_4.5",
+  "passed": true,
+  "speedup": 1.14,
+  "status": "success"
+ },
+ "load_log_tail": "Warning: Failed to compile custom kernels: HIP extension fp8_ops_v6 not compiled on this platform (functions=['fast_fp8_quant_dequant_hip'])\n",
+ "init_args": [
+  16384,
+  4096,
+  4096
+ ],
+ "shapes": [
+  [
+   8,
+   2048,
+   4096
+  ],
+  [
+   1,
+   2048,
+   4096
+  ],
+  [
+   3,
+   2048,
+   4096
+  ]
+ ],
+ "strict_fixed": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "max_abs_err_max": 0.0,
+  "max_abs_err_per_check": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "first_failures": [],
+  "n_param_pairs": 1,
+  "n_new_params": 1
+ },
+ "strict_inplace": {
+  "passed": false,
+  "n_checks": 27,
+  "n_failures": 24,
+  "max_abs_err_max": 59.38177490234375,
+  "max_abs_err_per_check": [
+   0.0,
+   7.9802703857421875,
+   12.836785316467285,
+   11.498308181762695,
+   19.802661895751953,
+   27.95025062561035,
+   28.611909866333008,
+   38.95685577392578,
+   55.423641204833984,
+   0.0,
+   7.089986324310303,
+   12.549938201904297,
+   12.053274154663086,
+   18.288570404052734,
+   27.233436584472656,
+   27.771190643310547,
+   39.44768524169922,
+   59.38177490234375,
+   0.0,
+   8.149246215820312,
+   12.48911190032959,
+   12.457265853881836,
+   17.610214233398438,
+   26.46920394897461,
+   26.090848922729492,
+   38.293800354003906,
+   56.032257080078125
+  ],
+  "first_failures": [
+   "seed0 shape(8, 2048, 4096) call1: mismatch max_abs_err=7.9802703857421875",
+   "seed0 shape(8, 2048, 4096) call2: mismatch max_abs_err=12.836785316467285",
+   "seed0 shape(1, 2048, 4096) call0: mismatch max_abs_err=11.498308181762695"
+  ],
+  "n_param_pairs": 1,
+  "n_new_params": 1
+ },
+ "timing_ms": {
+  "reference": 34.0894718170166,
+  "modelnew": 33.43974304199219,
+  "measured_speedup": 1.0194298375501425
+ },
+ "seconds": 5.3143298625946045
+}

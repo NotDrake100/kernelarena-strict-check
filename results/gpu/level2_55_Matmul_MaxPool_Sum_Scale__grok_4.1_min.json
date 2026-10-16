@@ -1,0 +1,116 @@
+{
+ "task": "level2_55_Matmul_MaxPool_Sum_Scale",
+ "model": "grok_4.1_min",
+ "reference": "55_Matmul_MaxPool_Sum_Scale.py",
+ "port_note": "pure PyTorch",
+ "claimed": {
+  "task": "level2_55_Matmul_MaxPool_Sum_Scale",
+  "model": "grok_4.1_min",
+  "passed": true,
+  "speedup": 1,
+  "status": "success"
+ },
+ "load_log_tail": "",
+ "init_args": [
+  32768,
+  32768,
+  2,
+  0.5
+ ],
+ "shapes": [
+  [
+   128,
+   32768
+  ],
+  [
+   1,
+   32768
+  ],
+  [
+   17,
+   32768
+  ]
+ ],
+ "strict_fixed": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "max_abs_err_max": 0.0,
+  "max_abs_err_per_check": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "first_failures": [],
+  "n_param_pairs": 2,
+  "n_new_params": 2
+ },
+ "strict_inplace": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "max_abs_err_max": 0.0,
+  "max_abs_err_per_check": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "first_failures": [],
+  "n_param_pairs": 2,
+  "n_new_params": 2
+ },
+ "timing_ms": {
+  "reference": 18.169343948364258,
+  "modelnew": 18.180095672607422,
+  "measured_speedup": 0.9994085991384872
+ },
+ "seconds": 112.88749551773071
+}

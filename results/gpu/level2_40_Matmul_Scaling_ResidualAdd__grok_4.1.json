@@ -1,0 +1,115 @@
+{
+ "task": "level2_40_Matmul_Scaling_ResidualAdd",
+ "model": "grok_4.1",
+ "reference": "40_Matmul_Scaling_ResidualAdd.py",
+ "port_note": "pure PyTorch",
+ "claimed": {
+  "task": "level2_40_Matmul_Scaling_ResidualAdd",
+  "model": "grok_4.1",
+  "passed": true,
+  "speedup": 1.3,
+  "status": "success"
+ },
+ "load_log_tail": "",
+ "init_args": [
+  4096,
+  4096,
+  0.5
+ ],
+ "shapes": [
+  [
+   16384,
+   4096
+  ],
+  [
+   1,
+   4096
+  ],
+  [
+   17,
+   4096
+  ]
+ ],
+ "strict_fixed": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "max_abs_err_max": 0.0,
+  "max_abs_err_per_check": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "first_failures": [],
+  "n_param_pairs": 2,
+  "n_new_params": 2
+ },
+ "strict_inplace": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "max_abs_err_max": 0.0,
+  "max_abs_err_per_check": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "first_failures": [],
+  "n_param_pairs": 2,
+  "n_new_params": 2
+ },
+ "timing_ms": {
+  "reference": 33.701887130737305,
+  "modelnew": 33.315839767456055,
+  "measured_speedup": 1.011587502100378
+ },
+ "seconds": 4.041990041732788
+}

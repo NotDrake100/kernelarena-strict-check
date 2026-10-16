@@ -1,0 +1,18 @@
+{
+ "single_weights_only": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "first_failures": []
+ },
+ "inplace_weight_updates": {
+  "passed": false,
+  "n_checks": 27,
+  "n_failures": 24,
+  "first_failures": [
+   "seed0 shape(2, 64, 256) call1: mismatch max_abs_err=1.3497527837753296",
+   "seed0 shape(2, 64, 256) call2: mismatch max_abs_err=2.114121198654175",
+   "seed0 shape(1, 1, 256) call0: mismatch max_abs_err=1.8170297145843506"
+  ]
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "level2_98_Matmul_AvgPool_GELU_Scale_Max/grok_4.1_min/perturb=False": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "first_failures": []
+ },
+ "level2_98_Matmul_AvgPool_GELU_Scale_Max/grok_4.1_min/perturb=True": {
+  "passed": false,
+  "n_checks": 27,
+  "n_failures": 24,
+  "first_failures": [
+   "seed0 shape8 call1: mismatch max_abs_err=0.05604591965675354",
+   "seed0 shape8 call2: mismatch max_abs_err=0.4409811496734619"
+  ]
+ },
+ "level2_73_Conv2d_BatchNorm_Scaling/gemini_3_flash/perturb=False": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "first_failures": []
+ },
+ "level2_73_Conv2d_BatchNorm_Scaling/gemini_3_flash/perturb=True": {
+  "passed": false,
+  "n_checks": 27,
+  "n_failures": 24,
+  "first_failures": [
+   "seed0 shape2 call1: mismatch max_abs_err=2.00264573097229",
+   "seed0 shape2 call2: mismatch max_abs_err=3.995494842529297"
+  ]
+ },
+ "level2_40_Matmul_Scaling_ResidualAdd/grok_4.1/perturb=False": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "first_failures": []
+ },
+ "level2_40_Matmul_Scaling_ResidualAdd/grok_4.1/perturb=True": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "first_failures": []
+ },
+ "level2_40_Matmul_Scaling_ResidualAdd/opus_4.5_min/perturb=False": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "first_failures": []
+ },
+ "level2_40_Matmul_Scaling_ResidualAdd/opus_4.5_min/perturb=True": {
+  "passed": true,
+  "n_checks": 27,
+  "n_failures": 0,
+  "first_failures": []
+ }
+}

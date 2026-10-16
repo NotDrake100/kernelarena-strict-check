@@ -1,0 +1,15 @@
+{
+ "files": 444,
+ "passed": 417,
+ "verdicts_passed": {
+  "custom_kernel_unused_in_forward": 264,
+  "custom_kernel_used": 138,
+  "no_custom_kernel": 15
+ },
+ "verdicts_passed_speedup_gt1": {
+  "custom_kernel_used": 78,
+  "custom_kernel_unused_in_forward": 148,
+  "no_custom_kernel": 10
+ },
+ "passed_null_speedup": 33
+}

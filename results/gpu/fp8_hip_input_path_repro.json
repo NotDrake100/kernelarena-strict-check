@@ -1,0 +1,41 @@
+{
+ "note": "REPRODUCTION of the opus_4.5 level4_104 HIP fast_fp8_quant_dequant math (no FP8 cast) vs FP8 quant-dequant; not the HIP kernel itself",
+ "runs": [
+  {
+   "seed": 0,
+   "shape": [
+    16384,
+    4096,
+    4096
+   ],
+   "max_abs_err": 0.20124420523643494,
+   "rel_fro_err": 0.02654588595032692,
+   "allclose_1e3": false,
+   "allclose_1e2": false
+  },
+  {
+   "seed": 1,
+   "shape": [
+    16384,
+    4096,
+    4096
+   ],
+   "max_abs_err": 0.19418764114379883,
+   "rel_fro_err": 0.02652236633002758,
+   "allclose_1e3": false,
+   "allclose_1e2": false
+  },
+  {
+   "seed": 2,
+   "shape": [
+    16384,
+    4096,
+    4096
+   ],
+   "max_abs_err": 0.19800841808319092,
+   "rel_fro_err": 0.026558244600892067,
+   "allclose_1e3": false,
+   "allclose_1e2": false
+  }
+ ]
+}

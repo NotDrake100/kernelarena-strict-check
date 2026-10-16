@@ -1,0 +1,33 @@
+{
+ "use_custom_kernels": false,
+ "compile_log_head": "Warning: Failed to compile custom kernels: Ninja is required to load C++ extensions (pip install ninja to get it)\n",
+ "runs": [
+  {
+   "seed": 0,
+   "max_abs_err_before": 0.0,
+   "data_ptr_unchanged": true,
+   "max_abs_err_after_inplace": 6.581222057342529,
+   "rel_err_after_inplace": 1.2060203552246094,
+   "allclose_1e3_after": false,
+   "max_abs_err_after_copy_": 1.878263235092163
+  },
+  {
+   "seed": 1,
+   "max_abs_err_before": 0.0,
+   "data_ptr_unchanged": true,
+   "max_abs_err_after_inplace": 6.921874523162842,
+   "rel_err_after_inplace": 1.2097680568695068,
+   "allclose_1e3_after": false,
+   "max_abs_err_after_copy_": 1.8989226818084717
+  },
+  {
+   "seed": 2,
+   "max_abs_err_before": 0.0,
+   "data_ptr_unchanged": true,
+   "max_abs_err_after_inplace": 6.440473556518555,
+   "rel_err_after_inplace": 1.2087479829788208,
+   "allclose_1e3_after": false,
+   "max_abs_err_after_copy_": 1.8766018152236938
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "task": "level1_9_Tall_skinny_matrix_multiplication_",
+ "model": "gpt_5.2_min",
+ "reference": "9_Tall_skinny_matrix_multiplication_.py",
+ "port_note": "pure PyTorch",
+ "claimed": {
+  "task": "level1_9_Tall_skinny_matrix_multiplication_",
+  "model": "gpt_5.2_min",
+  "passed": true,
+  "speedup": 0.03,
+  "status": "success"
+ },
+ "load_log_tail": "",
+ "init_args": [],
+ "shapes": [
+  [
+   [
+    32768,
+    32
+   ],
+   [
+    32,
+    32768
+   ]
+  ]
+ ],
+ "strict_fixed": {
+  "passed": true,
+  "n_checks": 9,
+  "n_failures": 0,
+  "max_abs_err_max": 0.0,
+  "max_abs_err_per_check": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "first_failures": [],
+  "n_param_pairs": 0,
+  "n_new_params": 0
+ },
+ "strict_inplace": {
+  "passed": true,
+  "n_checks": 9,
+  "n_failures": 0,
+  "max_abs_err_max": 0.0,
+  "max_abs_err_per_check": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "first_failures": [],
+  "n_param_pairs": 0,
+  "n_new_params": 0
+ },
+ "timing_ms": {
+  "reference": 4.445695877075195,
+  "modelnew": 5.171199798583984,
+  "measured_speedup": 0.8597029800110505
+ },
+ "seconds": 2.556368112564087
+}
