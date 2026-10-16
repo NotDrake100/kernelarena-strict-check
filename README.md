@@ -2,7 +2,7 @@
 
 ## The question
 
-Can AI write GPU kernels that are both faster and still correct? [KernelArena](https://kernelarena.ai/eval?suite=kernelbench-hip) ranks kernels written by AI models. To count, each kernel has to give the same output as the original model it replaces.
+Wafer has been building agents that rewrite GPU kernels to run faster. [KernelArena](https://kernelarena.ai/eval?suite=kernelbench-hip) ranks those AI-written kernels, and to count, each kernel has to give the same output as the original model it replaces. The question behind the leaderboard is whether an AI-written kernel can be both faster and still correct.
 
 ## The problem
 
