@@ -2,19 +2,15 @@
 
 ## The question
 
-Wafer has been building agents that rewrite GPU kernels to run faster. [KernelArena](https://kernelarena.ai/eval?suite=kernelbench-hip) ranks those AI-written kernels, and to count, each kernel has to give the same output as the original model it replaces. The question behind the leaderboard is whether an AI-written kernel can be both faster and still correct.
+Wafer is trying to answer a big question right now in the AI industry: can AI write GPU kernels that are both fast and still correct? [KernelArena](https://kernelarena.ai/eval?suite=kernelbench-hip) puts that question to the test by ranking AI-written kernels, and each kernel has to match the original model's output to pass. Below is what I found, what I'm thinking about, and how I'm solving the problem.
 
 ## The problem
 
-Some entries save a copy of the weights once and keep reusing the saved copy. Reusing the saved copy works until the weights are updated in place, for example during training or when new weights are loaded. The entry doesn't notice the weight change, keeps using its old copy, and gives wrong answers.
+Some entries keep a copy of the model weights and keep reusing the copy. The entries only rebuild the copy when the weight's memory address changes, and an in-place update keeps the same address. So when the weights are updated, the entries keep using the old copy and give wrong answers. The normal check only runs with fixed weights, so the normal check never catches the stale copy.
 
-The normal check never sees the stale copy, because the normal check runs with the same weights the whole time.
+## How I found the stale copies
 
-## How we found the stale copies
-
-We wrote a stricter check that changes the weights between calls and compares the output again each time.
-
-Of the 16 entries we tested, 6 passed every normal check and then failed once the weights changed, and some were off by as much as 59. For each of these 6, 24 of the 27 checks failed. One more entry, `level3_43` / `kimi_k2`, fails even when the weights stay fixed.
+I found the stale copies with a stricter check that changes the weights between calls. Six of the 16 entries I tested passed every normal check, then failed once the weights changed. For each of these 6 entries, 24 of the 27 checks failed, and some were off by as much as 59. One more entry, `level3_43` / `kimi_k2`, fails even when the weights stay fixed.
 
 ![Pass and fail for each entry](charts/pass_fail.png)
 
