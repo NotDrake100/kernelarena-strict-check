@@ -26,6 +26,10 @@ This chart shows how big the error gets after the weights change. With the weigh
 
 The fix is to refresh the saved weights whenever they change.
 
+## What this shows
+
+The normal check missed this flaw. This kind of bug, where a kernel keeps old state and only breaks when something changes between calls, can be found with stricter checks like this one, and the same approach can be taken further across the leaderboard.
+
 ## Timing: NOT comparable
 
 The leaderboard's speed numbers come from an AMD MI300X. We ran on an NVIDIA A100, and the AMD-specific kernel code can't run there, so our timings can't be compared with the leaderboard's.
