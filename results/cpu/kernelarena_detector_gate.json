@@ -1,0 +1,276 @@
+{
+ "gate": {
+  "stale_flagged": 6,
+  "stale_total": 6,
+  "clean_flagged": 0,
+  "clean_total": 10,
+  "stale_hits": [
+   "level2_73_Conv2d_BatchNorm_Scaling/gemini_3_flash",
+   "level2_98_Matmul_AvgPool_GELU_Scale_Max/gemini_3_flash",
+   "level2_98_Matmul_AvgPool_GELU_Scale_Max/gpt_5.2",
+   "level2_98_Matmul_AvgPool_GELU_Scale_Max/gpt_5.2_min",
+   "level2_98_Matmul_AvgPool_GELU_Scale_Max/grok_4.1_min",
+   "level4_104_FP8_Matmul/opus_4.5"
+  ],
+  "clean_hits": [],
+  "passed": true
+ },
+ "rows": [
+  {
+   "id": "level2_73_Conv2d_BatchNorm_Scaling/gemini_3_flash",
+   "label": "stale",
+   "flagged": true,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [
+    {
+     "attr": "fused_weight",
+     "reason": "caches derived parameter copy on self.fused_weight in forward(); rebuild keys=[is_none] (no _version/values)",
+     "line": 55,
+     "snippet": "self.fused_weight = w * fused_scale",
+     "keys": [
+      "is_none"
+     ]
+    },
+    {
+     "attr": "fused_bias",
+     "reason": "caches derived parameter copy on self.fused_bias in forward(); rebuild keys=[is_none] (no _version/values)",
+     "line": 56,
+     "snippet": "self.fused_bias = ((b - mean) * inv_std * gamma + beta) * self.scaling_factor",
+     "keys": [
+      "is_none"
+     ]
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "level2_98_Matmul_AvgPool_GELU_Scale_Max/gemini_3_flash",
+   "label": "stale",
+   "flagged": true,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [
+    {
+     "attr": "weight_pooled",
+     "reason": "caches derived parameter copy on self.weight_pooled in _initialize_pooled_weights(); rebuild keys=[is_none] (no _version/values)",
+     "line": 108,
+     "snippet": "self.weight_pooled = wp",
+     "keys": [
+      "is_none"
+     ]
+    },
+    {
+     "attr": "bias_pooled",
+     "reason": "caches derived parameter copy on self.bias_pooled in _initialize_pooled_weights(); rebuild keys=[is_none] (no _version/values)",
+     "line": 114,
+     "snippet": "self.bias_pooled = bp",
+     "keys": [
+      "is_none"
+     ]
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "level2_98_Matmul_AvgPool_GELU_Scale_Max/gpt_5.2",
+   "label": "stale",
+   "flagged": true,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [
+    {
+     "attr": "_w_agg",
+     "reason": "caches derived parameter copy on self._w_agg in _rebuild_agg(); rebuild keys=[device,ready_flag] (no _version/values)",
+     "line": 142,
+     "snippet": "self._w_agg = w_agg.contiguous()",
+     "keys": [
+      "device",
+      "ready_flag"
+     ]
+    },
+    {
+     "attr": "_b_agg",
+     "reason": "caches derived parameter copy on self._b_agg in _rebuild_agg(); rebuild keys=[device,ready_flag] (no _version/values)",
+     "line": 143,
+     "snippet": "self._b_agg = b_agg.contiguous()",
+     "keys": [
+      "device",
+      "ready_flag"
+     ]
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "level2_98_Matmul_AvgPool_GELU_Scale_Max/gpt_5.2_min",
+   "label": "stale",
+   "flagged": true,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [
+    {
+     "attr": "_w_red",
+     "reason": "caches derived parameter copy on self._w_red in _ensure_reduced_params(); rebuild keys=[device,dtype,is_none] (no _version/values)",
+     "line": 118,
+     "snippet": "self._w_red = w_red",
+     "keys": [
+      "device",
+      "dtype",
+      "is_none"
+     ]
+    },
+    {
+     "attr": "_b_red",
+     "reason": "caches derived parameter copy on self._b_red in _ensure_reduced_params(); rebuild keys=[device,dtype,is_none] (no _version/values)",
+     "line": 119,
+     "snippet": "self._b_red = b_red",
+     "keys": [
+      "device",
+      "dtype",
+      "is_none"
+     ]
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "level2_98_Matmul_AvgPool_GELU_Scale_Max/grok_4.1_min",
+   "label": "stale",
+   "flagged": true,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [
+    {
+     "attr": "Wgroup",
+     "reason": "caches derived parameter copy on self.Wgroup in __init__; rebuild keys=[built_once] (no _version/values)",
+     "line": 20,
+     "snippet": "self.register_buffer('Wgroup', self.linear.weight.view(num_groups, K, in_features).mean(dim=1))",
+     "keys": [
+      "built_once"
+     ]
+    },
+    {
+     "attr": "biasgroup",
+     "reason": "caches derived parameter copy on self.biasgroup in __init__; rebuild keys=[built_once] (no _version/values)",
+     "line": 21,
+     "snippet": "self.register_buffer('biasgroup', self.linear.bias.view(num_groups, K).mean(dim=1))",
+     "keys": [
+      "built_once"
+     ]
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "level4_104_FP8_Matmul/opus_4.5",
+   "label": "stale",
+   "flagged": true,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [
+    {
+     "attr": "_cached_weight_dequant",
+     "reason": "caches derived parameter copy on self._cached_weight_dequant in _maybe_update_weight_cache(); rebuild keys=[data_ptr,is_none] (no _version/values)",
+     "line": 247,
+     "snippet": "self._cached_weight_dequant = w_fp8.to(dtype) / w_scale",
+     "keys": [
+      "data_ptr",
+      "is_none"
+     ]
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "level1_9_Tall_skinny_matrix_multiplication_/gpt_5.2_min",
+   "label": "clean",
+   "flagged": false,
+   "stateful": false,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level2_40_Matmul_Scaling_ResidualAdd/grok_4.1",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level2_40_Matmul_Scaling_ResidualAdd/opus_4.5_min",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level2_55_Matmul_MaxPool_Sum_Scale/grok_4.1_min",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level3_43_MinGPTCausalAttention/grok_4.1_min",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level3_43_MinGPTCausalAttention/opus_4.5",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level3_43_MinGPTCausalAttention/opus_4.5_min",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level3_44_MiniGPTBlock/gpt_5.2",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level4_104_FP8_Matmul/gemini_3_flash",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  },
+  {
+   "id": "level3_43_MinGPTCausalAttention/kimi_k2",
+   "label": "clean",
+   "flagged": false,
+   "stateful": true,
+   "parse_kind": "python",
+   "findings": [],
+   "notes": []
+  }
+ ]
+}
