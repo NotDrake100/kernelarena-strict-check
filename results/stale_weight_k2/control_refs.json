@@ -1,0 +1,2346 @@
+{
+ "n": 236,
+ "flagged": 0,
+ "rate": 0.0,
+ "refs": [
+  {
+   "hash": "2236697c81f2920086f85c7a1d5c3a4125664487388b8e1d07c761cd7aa3c0f0",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "1_Square_matrix_multiplication_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "df2c1aae615e728694aa868397a1b315cc6925667c1a81b711e61a97a862ea39",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "2_Standard_matrix_multiplication_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "16153e37cffd09257aa86db740696970945268df8c07ba18770bb084a69ae3d3",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "3_Batched_matrix_multiplication",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7af43dd7672b88d1809d5a82e4dee83e09f8f53fa2effea01fbf3b1ec8bf889f",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "4_Matrix_vector_multiplication_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "5ac41fb122d8346b9b85a8ba6c91895fec54e6feb1a36c82512e53903e03b164",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "5_Matrix_scalar_multiplication",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7390f645a2ddd203621c51e01025ad3554fda9545ee9d5333a08af22c18ff83c",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "6_Matmul_with_large_K_dimension_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "0a7d4ff759d3d7c03fd183535555c235bc89818c14179ff62ba0fbc3d48b7b60",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "7_Matmul_with_small_K_dimension_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b4c0139ce7fc273fa9eafec24a9201f5441c505be06046324c21d01cac62d2a9",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "8_Matmul_with_irregular_shapes_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "67bc8f022f611b5e587c82e5de724dba30c1b7d0e9a59eba820544167e6544a2",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "9_Tall_skinny_matrix_multiplication_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "8e0a7cdc1527c8f918843fcab3bb07978da36d8cbfd2ea33f15e8be300f7763c",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "10_3D_tensor_matrix_multiplication",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7ab4daa3e80fbc7c6e4626dfca001198a893323baf748fef0b9ac14cdd409384",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "11_4D_tensor_matrix_multiplication",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "96ed873aa02212ff450c377d180e19d5449f228b7df697d342b090d52d4d4c0f",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "12_Matmul_with_diagonal_matrices_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7d769c172d0a2a703d923b0ba7207e7b966f33c2b24077d874cc46c18601ffb7",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "13_Matmul_for_symmetric_matrices",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "34588c41d8402c02412218d820aad4cff4782c2d0f92f72573c521a8f3cfac5a",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "14_Matmul_for_upper_triangular_matrices",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4a22a0b53ffcb14c3b702d03b3593e5f597e0d368a86b180a5eb42739418fa2a",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "15_Matmul_for_lower_triangular_matrices",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "dfcb4e58e54d92963e26e1e2d88864fef274c75ed213937fa895ac87a1e0fdaa",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "16_Matmul_with_transposed_A",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "d661f77fe10f8bbc9c0ebb620c00ad12130057f5a89e05e71f0d667248f5d1f1",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "17_Matmul_with_transposed_B",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "377345cd785d9559fa64fb580019197c281f4e804d3135d598969ed4a25b8808",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "18_Matmul_with_transposed_both",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1b0829ac7344b3231074f25a134063e9eb73db33918624ad03f936f82e5794ea",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "19_ReLU",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "2e85a39fb823fe4b5d174727d817fdc64134274b67d3eb2ead2bc9ccf2797f03",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "20_LeakyReLU",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b24a44a7c5e828be6f085d125641a7d3a39526da4b6e56dd3d33ec4393a2dd85",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "21_Sigmoid",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "74337a0e35cf8d0aa696c36725b4b9aa2101d12d3a78ba14557d953607149197",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "22_Tanh",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "34ba0b50b1b42a5ecbb00ef04cf1f67f31f3b1fbf84c24aa8b00678d91aa0d5c",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "23_Softmax",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "50ab25c1d507757c1a2f01d77d71428ff6fd5bf31ead30d4133396b4f5ab8159",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "24_LogSoftmax",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "e6e9a2be03311e0cd5b3b3f349c1be0661c997bc45d76e12d132f9981a4ebb8c",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "25_Swish",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "f598f738ad61d38f90619dd9f72ce1e4e7ae848c6d366c84992944b8a5c6b18b",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "26_GELU_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "fc4ebf91081d6931025a1d7daeab8f6261b7931b65f780a59899d07c61c34c86",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "27_SELU_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c9cb96d5bbd111e882472675e8564e215487ef1c485a898a64c9540bf80e70ca",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "28_HardSigmoid",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "a8cc2f540ab0892677889a95d9d7efc7bacd7eaea8df422d585998e0fa3f152f",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "29_Softplus",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1ce26baa9b2bdf9c9901b28dad5d3edca4b4c854e803ce1cadf35b08b33313c2",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "30_Softsign",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "0dbc3c9181af497a08fe482fcba974ba7695d03cbcac2f1b7a5e3ad4d2bd2189",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "31_ELU",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "e57d67298edcb162d98d25fee341bca0702bcd2254467c33c05246b0006e6982",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "32_HardTanh",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "3d6022c98453b9264d6faf5d4202b4c7d8eba0812e2fc5e1d4ba5ff02fc68595",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "33_BatchNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ec83757b0770278153a6a34289bc0d4834bb89dc482019326f869192c5d9f88d",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "34_InstanceNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "d711c1361f0ad3af51da0e7f5678ac9113ead5c39362ca549edbfc1a84cddaf9",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "35_GroupNorm_",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "db91f93931335cbbf0b0aae3b582a5d4da1ab28f69055d344aa35a8ba6b13c8e",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "36_RMSNorm_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "8a5227601489815dddbc16dce28252b305adbd650158402be70e7c8df30d1880",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "37_FrobeniusNorm_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "6478c29a1eb9346aa413e24edceaa0a7562ead34db59cbdfd068302f5ca9ae56",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "38_L1Norm_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "e96c64ff311d8dc68fc55d5cde451a7e18f2ad7271c43d6be05fe1eb4feb77cf",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "39_L2Norm_",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7a72f96263fbd394a34cc215de7f2e200bfa674ddf7838b4483ee13285c29a91",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "40_LayerNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c54c2bab8bc63eefe14f05f8d4eeae6d56feb34647608f62b358c80b4de00357",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "41_Max_Pooling_1D",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "eb5c8a9a890f95b19ea3845628a143c92323bd922dad62f24e5156a7fa9ef290",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "42_Max_Pooling_2D",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c7992bed09e0f34380b3c34761fc5951ac927a52bc87fb7ffd69b529778e825d",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "43_Max_Pooling_3D",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4889e32bea89344150149796311e7c78e333ce58a00f8f7163529c6f2ed652dc",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "44_Average_Pooling_1D",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4bde03a0f5f3d5ca32a7a31455c921ba7f92f978af3216786237eae7942c8090",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "45_Average_Pooling_2D",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "e0e15d2040d4fbe468ad9e0d921d15e3ccea81335c00e1ace9e75be493768cd7",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "46_Average_Pooling_3D",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "8d87ab348084b646d2aa78939eb46a239540a0267d50e7cdfb9b06da34d2472f",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "47_Sum_reduction_over_a_dimension",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "0facdc3c8c25971a4c46cc6df9d84c405e92e3a20a28b157c735a3cfbdb46522",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "48_Mean_reduction_over_a_dimension",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "87ab7c3dae731d861de892419ac084773f247bae3329a4d9e4ea86d9cdfc2213",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "49_Max_reduction_over_a_dimension",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "53762f1cd9f198be86778a0da11d2a019eea247a968ceef93feffa736d5b4908",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "50_Product_reduction_over_a_dimension",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "97b1d101001e51d8a6e679fc9e220cac35be04dcfee596f42db196de31450453",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "51_Argmax_over_a_dimension",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "33bea085846d69ca09a37fe7285e524f594a81ac164f391f9754e442e3132197",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "52_Argmin_over_a_dimension",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4f8c17d95044f94d9c0da21d5f13e5eacf7c7572eb8e452977db96386e453bbb",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "53_Min_reduction_over_a_dimension",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "521f756c97dc02fa21029e3d745613940d4c2ae7664c1da0a04f6937f36064df",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "55_conv_standard_2D__asymmetric_input__square_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "db7b69ec8fd7919a06a485cc6a5d36cba3a02293ebf06a4cd3eb90fdff416a4e",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "56_conv_standard_2D__asymmetric_input__asymmetric_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c3dd251cfebcaf8083a395b797c771595711988927def768113fcb7ba8d8b554",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "57_conv_transposed_2D__square_input__square_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "aff0adb28b2e2cc18ef4b13a14d35ced9ac8abf480568e9bd06090925239711f",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "58_conv_transposed_3D__asymmetric_input__asymmetric_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "eb9a96f9a7a5ec57fa4f385398190bec4d4e451586d847e18aa0b14ce5619124",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "60_conv_standard_3D__square_input__asymmetric_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "cdac65f621236ec943bdb4e9e008da4ccb7a3bc95696dcf31ab21c2d5fd52d87",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "62_conv_standard_2D__square_input__asymmetric_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "578648eb66b7200a2de30cd2dd3a1d824771e0efd1ebc2b2bd9ed8cc37a77746",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "63_conv_standard_2D__square_input__square_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4df5d6688bd3083c17d7ab0ed98c174d0b4a44d99fac7c637346b177d1f47cb8",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "64_conv_transposed_1D",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4b685742b72bdf664ef5936da577a75868e3a5eb1176c851ecd055c501dde4e8",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "65_conv_transposed_2D__square_input__asymmetric_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "41c8ce4cf427df82ab93077de17612a2b4a327de1a661fa92fc44b15c45b0e9e",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "67_conv_standard_1D",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "dd210836ab5df440f51d3db3e0a2fa8631caf7be1ca88a860e8a2fbd03df00e9",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "69_conv_transposed_2D__asymmetric_input__asymmetric_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "f3dcfedb239f02271610550c86308635d9a8e3363e44f3b399ac79fed9befbbe",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "71_conv_transposed_2D__asymmetric_input__square_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4554754bac1ea039ba2fb2618150f1bc27e062e6e88d736dc1dee1cdf7c19527",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "72_conv_transposed_3D_asymmetric_input_asymmetric_kernel___strided_padded_grouped_",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "f2cb2319e2dff344cf818ad98b5a60bf3066eb019036d61237c4a17d6265ecc7",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "74_conv_transposed_1D_dilated",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "084dadb6842a20269f8f4185874e7eb6bbdf81f11167dad2e81b707c421deb41",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "75_conv_transposed_2D_asymmetric_input_asymmetric_kernel_strided__grouped____padded____dilated__",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c9c05e7c486e16e529eea05ec7ac5027e9e9589a91c2877627ca2657ab9dfa88",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "76_conv_standard_1D_dilated_strided__",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "761466186dc135cce12a682a637c2faea6defe036bbb6e795278282f7f7f79d8",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "78_conv_transposed_2D_asymmetric_input_asymmetric_kernel___padded__",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "841d096a34ad6eff085b1eddf2e7c4510449b0d594cdb624cb26aa8bb1935cef",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "79_conv_transposed_1D_asymmetric_input_square_kernel___padded____strided____dilated__",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "5a61907f59b979cc184da8afe42f9614519e18eb3fe70be6cc32fc06aa3c21bc",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "80_conv_standard_2D_square_input_asymmetric_kernel___dilated____padded__",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7374944b93c82a6b670e79516988fb4131ac84e95785b8ee58e045e91d08791f",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "81_conv_transposed_2D_asymmetric_input_square_kernel___dilated____padded____strided__",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "bced5b00f2665b78cdfa9e21c27718c0521134fd7b71f8d13459209c449a4b98",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "82_conv_depthwise_2D_square_input_square_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "24907e07e9145ea8ddd3765d5efa1a5b6b48c3ef19e86d7bc2439b76ed4d3600",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "83_conv_depthwise_2D_square_input_asymmetric_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "599bb2bbe35a725b78d767f849fab74c6b5a49f56963266d2927217d734ec594",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "84_conv_depthwise_2D_asymmetric_input_square_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7182818ad77134f6900c2ba78bf7467ac870b320bfa3573c887f8c0ade672865",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "85_conv_depthwise_2D_asymmetric_input_asymmetric_kernel",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "3bc46526d82007f74437e46e5b8316f3eb02df08e0659e327b1ee025cafb0a81",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "86_conv_depthwise_separable_2D",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "67e63c7752807cd3b3361194b6d7a679a0d82de384d31005ee57e4bec0f080dc",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "87_conv_pointwise_2D",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "06e7a1b70d458d68585751803f39efed5174003926c93c659269b4be32a33a69",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "88_MinGPTNewGelu",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "e4d764b5813b3732f7c5e11ee1eb2a2edde9279808112bfad0973821edde1605",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "89_cumsum",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "75e2685b7121ac8b78036dd3c458e4b5d3bbc29e3c7972a3d288da707e0cfd2a",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "90_cumprod",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "8e05cd9c3fa2a9569884a780164f2d3074a0453bdc7dc1c9a885fb79763aafdd",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "91_cumsum_reverse",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b3169f491dde09fcb41b1299b7c23b66dae8785a7d7d18b6c0ed79b5d754e5f1",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "93_masked_cumsum",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "47d00ce2a8bed173f99292c74b2599955ff90245d4cf51ea0c17179bc288432f",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "94_MSELoss",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "a9a2489c73d1766ec853b270e76386efa34a2cb278bcf64970c7c52f43420802",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "95_CrossEntropyLoss",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "88ea0fca127724de291159a9855dab0e9fbc7e6d0852fe82b18f0e2fd25f7501",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "96_HuberLoss",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "56c41eb7ea477ef81b86f025c8755aab4482e99fb01df29ddef90f6679a4ab82",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "97_CosineSimilarityLoss",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b6671af6e26dcdd9bb1cc2e7bc499f638fd7fd84145fcbd5384d1ebce2354642",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "98_KLDivLoss",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ad852f205f79cb4e3ae388b32dcda8e87ef94fe95f1d5b9a3c6df503a1ba0254",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "99_TripletMarginLoss",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "817e8ef2394e6b2ec7641bb6f4ab7522b9b5bd87fd6dfa69551573044946fc23",
+   "source": "k1_pytorch_code_module",
+   "level": 1,
+   "op_name": "100_HingeLoss",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "5f71388645f042991784c632e72ad70866b2480a439f9322e16a60a865b4b07c",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "1_Conv2D_ReLU_BiasAdd",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "32dd30c016a31079836466e89fdc81d044a2faf736fcd8409ac6f7bc3b5700fb",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "2_ConvTranspose2d_BiasAdd_Clamp_Scaling_Clamp_Divide",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "3f001a9b2c1845abc6ad63151d22807f395e368ecab45df4ff29f85db541225c",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "3_ConvTranspose3d_Sum_LayerNorm_AvgPool_GELU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "5f467ca21ac1b38faeb24337da14e56f1327318bb049871c9320e311f0b76faf",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "4_Conv2d_Mish_Mish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "66e23a17b17a49858cca1ad338cabb3e6b4f37d26ad8f9132b3b148b0ff10286",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "5_ConvTranspose2d_Subtract_Tanh",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "dae98fcfc1a66b12461c12cc22d65d6a7a71091999953143167076c1a022b68a",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "6_Conv3d_Softmax_MaxPool_MaxPool",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "f1a672071c6b7b2312eb1dc07b1d33c6c2ea9e8e957c258e96e83dcf25695786",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "7_Conv3d_ReLU_LeakyReLU_GELU_Sigmoid_BiasAdd",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "470bd5438957c66a502d82bb5ebe69f3a17a081db72cf52f6fc68c7f49114a03",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "8_Conv3d_Divide_Max_GlobalAvgPool_BiasAdd_Sum",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4a02054ac32152f9c583c00d35ca460f2d8b02bcb05e3afb5613a1e5f46c66f4",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "9_Matmul_Subtract_Multiply_ReLU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "920aadb73bff60d0c90ab2f939e07aa9d199a9c8a0cda132b86080a5f70a7392",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "10_ConvTranspose2d_MaxPool_Hardtanh_Mean_Tanh",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "e3216882f38461e1ded0335f0aead886a7cf4f3d5a42fa5fda5682df7e0635b0",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "11_ConvTranspose2d_BatchNorm_Tanh_MaxPool_GroupNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "488cd04509f20284645f27de758f59d147f5b8308c029b863f08e6e43c407582",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "12_Gemm_Multiply_LeakyReLU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "5c73ccf8d901dae761a2e8846e8fae2f6eda605e065332578bd55bb471b0cdc5",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "13_ConvTranspose3d_Mean_Add_Softmax_Tanh_Scaling",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "20f962f64c6661fd7d99a8e52b15b4921aa5f4a98f3126624504ba460a88d22c",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "14_Gemm_Divide_Sum_Scaling",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b4695bdd5910e4a7f83507a4fb2611a615b3b8da3c1b09194652213cb7bd3c12",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "15_ConvTranspose3d_BatchNorm_Subtract",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "906078b9491953cf71c5576a4bf53bc27a24f723b4567c666584b376123d18f2",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "16_ConvTranspose2d_Mish_Add_Hardtanh_Scaling",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "02e65e287420ae266f5a568f16737ad1e140d3dddbae2abd5ab1d47139b96439",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "17_Conv2d_InstanceNorm_Divide",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c85837458eaa1d691d2750443b1c97d04b66cfc423c572c5c5473bca020460f4",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "18_Matmul_Sum_Max_AvgPool_LogSumExp_LogSumExp",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "71f7e4e2474624ce599aaf10d64566744debd2f37bf66fbeb27555346d1106d0",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "19_ConvTranspose2d_GELU_GroupNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4874c16723646c5b4107620a953240159d8be2704b6126cb309d9777eff68762",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "20_ConvTranspose3d_Sum_ResidualAdd_Multiply_ResidualAdd",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "f6f8402a59d538675cfdfe1ad6f4ac72984ae17203f6e5952b668b2f384f0869",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "21_Conv2d_Add_Scale_Sigmoid_GroupNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "9a0f27a4f98c497e448b74de1665115474b3e1991773e586c932a2055424d222",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "22_Matmul_Scale_ResidualAdd_Clamp_LogSumExp_Mish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "580ccec7e6427256c1f7854232c323c031386bb65b8b88036715ef6080b46811",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "23_Conv3d_GroupNorm_Mean",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "272c134ef6dcd473c24d002e99cb56e6df05cb07a46133f97c9f0360243f5ba9",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "24_Conv3d_Min_Softmax",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "dd4e2b1eb9359faace65be5ec49f8c81aeb7ed7c3fcc3bdb4d419d22141324e4",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "25_Conv2d_Min_Tanh_Tanh",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "616ed858c41e76ce5b505c850712a7dfa62038bad38110e08a77f16d2676aabe",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "26_ConvTranspose3d_Add_HardSwish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "6bf32de453f2f93a894326ef1ed79bdf14a57c5e4c0e6cc238c3b56c5670f768",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "27_Conv3d_HardSwish_ReLU_Softmax_Mean",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "3d321b6c33e407307ebc2b09333d432668b744e9640a36fb416609a95fcddfca",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "28_BMM_InstanceNorm_Sum_ResidualAdd_Multiply",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "809ec9888511bc012be561d8f29b73afc8ad96b9a90b0870de46c5da1b8a30f3",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "29_Matmul_Mish_Mish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "3bc654fb408dea12a1d5fff7afc93bb0ae4d65e24f3ecc8e9521ec4330366c3c",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "30_Gemm_GroupNorm_Hardtanh",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "609eba3fa521e31de1cdbf07276f9d9211c3a378f349bbfd0142339a34c6a1b8",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "31_Conv2d_Min_Add_Multiply",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "73a0492b79b68ca78a163c68ba834deb9e17d16c18cbbb4ed7b386c4a71c89e9",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "32_Conv2d_Scaling_Min",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ce853e64d014d9fd07341508af406702ae2303ce33f0363a539da7a30c11467c",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "33_Gemm_Scale_BatchNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ed5eff50310751f7ff3d2b9e4bd5ca3c23d082be3073c539700200e08d0008cc",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "34_ConvTranspose3d_LayerNorm_GELU_Scaling",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "53884c9e2e94d513db510490ded4cfc570f4f2abbb4a72568304444addf6f401",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "35_Conv2d_Subtract_HardSwish_MaxPool_Mish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7f17a94770d2d181a487bace735d24ebb56dad5c9b87c938bd46ffe40716fdb0",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "36_ConvTranspose2d_Min_Sum_GELU_Add",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1f17222467a2ec9b7eca32e98f2c3651f7bb565aeaf18bf9d00d66c83cd1aa20",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "37_Matmul_Swish_Sum_GroupNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1c722da6b3fb972cfc53777bee0c75c52141769b402d11b37911c19dfdd60942",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "38_ConvTranspose3d_AvgPool_Clamp_Softmax_Multiply",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "9d17cffc9533ba070dfb048e9d94217d728c90adbb84315becf7517c1118bb2d",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "39_Gemm_Scale_BatchNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "d23c66debcc56e54ba1182d26f2e7ffc55cb04c86ab392c3aebf66ff1673e9d1",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "40_Matmul_Scaling_ResidualAdd",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "60449467fd8937efc2b455f74fea9eae563d436fe891d9f030456986c7d31db6",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "41_Gemm_BatchNorm_GELU_GroupNorm_Mean_ReLU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4b7c5a665adc45eb396798c8eadebc209177cbbaf925b700eb8f20fb0012c725",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "42_ConvTranspose2d_GlobalAvgPool_BiasAdd_LogSumExp_Sum_Multiply",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "af79e1f0b6603569f41dac138078db718f747318c5710bd1aaf3a20fc322a190",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "43_Conv3d_Max_LogSumExp_ReLU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b20edb9d7a15bcc77f6cffffb9f73f4523fee2f0233e9298ad8af90369c07259",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "44_ConvTranspose2d_Multiply_GlobalAvgPool_GlobalAvgPool_Mean",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c072b72838429ed1570cf258eae809b88eaf9f4681ed11d08d95882e112593ec",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "45_Gemm_Sigmoid_Sum_LogSumExp",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b098cf45c3a69c52035d1155abee14eaf0dd7a5918e7d01752c99a617647304a",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "46_Conv2d_Subtract_Tanh_Subtract_AvgPool",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "11f563baf46eacf8b293a83946d2c5d514f0727335d707419d9d943afad8c833",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "47_Conv3d_Mish_Tanh",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7a866d9272f41306b648155f79cca9ef0fe543397437922cfb7fd15a389cb119",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "48_Conv3d_Scaling_Tanh_Multiply_Sigmoid",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "6d94226107ee4b7b308203b34f8c6f396d70906430f2e2a3d416421e166f0572",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "49_ConvTranspose3d_Softmax_Sigmoid",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1b12200e530462687424f3b20481392690dd3a55d93015293d52a7adbc1b3850",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "50_ConvTranspose3d_Scaling_AvgPool_BiasAdd_Scaling",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "93786bfec9a2b58f8c8693aa2e0d5a6018aa8e0a06fb3508f851ac5445472dbd",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "51_Gemm_Subtract_GlobalAvgPool_LogSumExp_GELU_ResidualAdd",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "8e6316e57bd4038beb725b11b976be4f96defc8b55c4ecc008b4804894d9e7b7",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "52_Conv2d_Activation_BatchNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4da0b8e0e653243f9d43c3603b6f857c23c905fe3ad3c82a8ffdbc78c8e0f7da",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "53_Gemm_Scaling_Hardtanh_GELU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "feb299bd0a7d1763189e04886cab9da8894f98f7d59b4abbd9cb3aab002632b0",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "54_Conv2d_Multiply_LeakyReLU_GELU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "e32faf0c4436675f19832eb511828294be1b4ba5bc7182b84c182271c44a1e47",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "55_Matmul_MaxPool_Sum_Scale",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "adf4547fe1362aa6c67894edcb038397e2fd89b5fcdb48862ab6e8ad46aa2182",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "56_Matmul_Sigmoid_Sum",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "bc740b9dc97d32eff0cc63befc8e40796a89c8e30a1e30a517ecb746381a7769",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "57_Conv2d_ReLU_HardSwish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "97617e261176f133f7ff60e97691b7fcf1c36245f565fa5942a4096cea76f21f",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "58_ConvTranspose3d_LogSumExp_HardSwish_Subtract_Clamp_Max",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1bcf0542b4736174eef906dbb8bcc7c7971aec154ceca424b7b00817c2a14f07",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "59_Matmul_Swish_Scaling",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "8b24439a515560ffd7927353cd1876027265dc9f4c19694a7d52b439f8c7bd40",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "60_ConvTranspose3d_Swish_GroupNorm_HardSwish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "0c13f8d1b86c64faa969e0692736a4febf50b5b0e37cb0d7f92f484bfbe3e17c",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "61_ConvTranspose3d_ReLU_GroupNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ae700f607293e722e2d487ea86596582c766056762bd56261860247f33fe90ff",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "62_Matmul_GroupNorm_LeakyReLU_Sum",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "20b3d408ed19ea159afbfe91bddf92651a00b9c05a69233bb4ff71ad410ae1ad",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "63_Gemm_ReLU_Divide",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "3931c0b3e751bd0f07c44cd6101e5fbbb0898449f66ab42371b3e99c4b5ad641",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "64_Gemm_LogSumExp_LeakyReLU_LeakyReLU_GELU_GELU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ffb0a924845b49ab472f33a7335d8983f012c6a4a7c3e2b9b41ca0f78ea92006",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "65_Conv2d_AvgPool_Sigmoid_Sum",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "3bdada4c049d3cc36655047d06729acfe17e48511b2955480add1f8dc9479956",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "66_Matmul_Dropout_Mean_Softmax",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c90c478629f8dd83f4188e72636a034d9b302a447adbf0dc0a2daea96f6e36d2",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "67_Conv2d_GELU_GlobalAvgPool",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "41aa93813b88d87300b0823f8036e9503cf53049d8c932a693a8b6f04248a10e",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "68_Matmul_Min_Subtract",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "64b8a1fce7da91e0caa3b5e212738accb39372aabd5fcc6dfb39ede5e9d1810f",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "69_Conv2d_HardSwish_ReLU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "bede6eaac0ad7025ee8a8a8904388a9bb6b2f77dff1c70def367274b62614063",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "70_Gemm_Sigmoid_Scaling_ResidualAdd",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "703fc94ce12045d54a51dca986b2444c6776272afb363395188af7440fbe9f51",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "71_Conv2d_Divide_LeakyReLU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b67b61838c2319eff2efa40ef70e30b10f0dec168f0b91a7a935d2887f40a8b6",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "72_ConvTranspose3d_BatchNorm_AvgPool_AvgPool",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "30034b60e35cac7e9b2e2e842b7e454d246323cf1a1ac7cd56717ee14e174718",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "73_Conv2d_BatchNorm_Scaling",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c43fe1f7f0d33a9bbe2fafc51379ca1e83f98c0d874639867e692764188b484f",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "74_ConvTranspose3d_LeakyReLU_Multiply_LeakyReLU_Max",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "d8e6ae60decce5d29177c5d011c0ef9aeebd1f3beb41ec280bb3cd4708380c4c",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "75_Gemm_GroupNorm_Min_BiasAdd",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c53b2ff50a3ca54dea0fc1de64c1fbc44f9217e7086c35a6dcd76f0a12ed5e64",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "76_Gemm_Add_ReLU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "35882059af15587e7d654891302de19793a010a1f6de4d76880c656b5cbbc743",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "77_ConvTranspose3d_Scale_BatchNorm_GlobalAvgPool",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "d1706ab941088856cbd91daed1ea81277a1840954b4529bb90580981518b2173",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "78_ConvTranspose3d_Max_Max_Sum",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "8384e61b38fd3fb38d581e814cd4a39d22ccbfab54414d85f70709f52372c289",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "80_Gemm_Max_Subtract_GELU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7ee0dc0d3cef85ae73e54097f8736dd0988222aa010cfd6097c804cfb68e51cd",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "81_Gemm_Swish_Divide_Clamp_Tanh_Clamp",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c955b69b4b255d0002e8e60b61af896aeefcc9db4b1d45b840af673a83eca3e5",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "82_Conv2d_Tanh_Scaling_BiasAdd_Max",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "64d5cb226d073b4dae5015a4f70009f784ced69f4dfae4cffa0efbecf3bc7b9f",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "84_Gemm_BatchNorm_Scaling_Softmax",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4c49c495ed07af9e78024ce0d0ec9fc91543b5df61d888eded9f620b02e371f8",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "85_Conv2d_GroupNorm_Scale_MaxPool_Clamp",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "f7e05e29a78136b7c67b32df0031e163bb773b7cff52f5cee448a82594f92bb7",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "86_Matmul_Divide_GELU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "27412735f5f888507883baea5f14108c246245e564c5658db68cfbb6095e535a",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "87_Conv2d_Subtract_Subtract_Mish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "9b0b3185a9537300f7a346a9602942226bae45af0c1ec053f7fbf584bb5a88cf",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "88_Gemm_GroupNorm_Swish_Multiply_Swish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "545d98f9a72a75183ec3ca5b7ee283e83a0c59d118681a4ca68a65285015d829",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "89_ConvTranspose3d_MaxPool_Softmax_Subtract_Swish_Max",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "fad34a12f8eb18b106be131fe24160dc52030948b441291955b6a921802b17d3",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "90_Conv3d_LeakyReLU_Sum_Clamp_GELU",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "a1b0c6a3252db4d3044723c9a2c8d7e682fd0a7de65c41a44c91540b93c7566a",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "91_ConvTranspose2d_Softmax_BiasAdd_Scaling_Sigmoid",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "0f4fba441247a05edfdc8abbd5ebfd29517187f4b6605cfcb93581dd11d65999",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "92_Conv2d_GroupNorm_Tanh_HardSwish_ResidualAdd_LogSumExp",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "06ce4ca991b150c04af2b62a4f4e5472b5378d68a090cf9f9ab3d674491e834d",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "93_ConvTranspose2d_Add_Min_GELU_Multiply",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "b011cff63a76f24a3ecdc38aa3c71902a6be3173a824de7e0d35141c09ea19e8",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "94_Gemm_BiasAdd_Hardtanh_Mish_GroupNorm",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4e612bc7fbb94a5701ee227225bb91651fc2ac50653a00d9724a1a0784f65d26",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "95_Matmul_Add_Swish_Tanh_GELU_Hardtanh",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "f1cc3eeab72f468683074f9ca0a11d0675cc17f6de319412a350b71d81242256",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "96_ConvTranspose3d_Multiply_Max_GlobalAvgPool_Clamp",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ea4acd2f4a6b0120082e729f56534bba9b1cad81c1be76b758c3b68d746a13a2",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "97_Matmul_BatchNorm_BiasAdd_Divide_Swish",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ef263c3ececa06bbca3884dcacc4dd93fbc5155f4d2f7eb032930bda9a264f28",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "98_Matmul_AvgPool_GELU_Scale_Max",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "d32a0817330fbc81df2cb7dd1fcb37d103493bc381e5f52cadd2dc73e764aca3",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "99_Matmul_GELU_Softmax",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "def159dbf1dc4986ccd684aa44b926ce9ead682de3e3b91a9085418f512a7c2c",
+   "source": "k1_pytorch_code_module",
+   "level": 2,
+   "op_name": "100_ConvTranspose3d_Clamp_Min_Divide",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "94b2926402b42b116833c6dc50c9680059422b7408147a3c166e43af1a9cf44c",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "1_MLP",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "56ca14aa741bd48ab8d7237169e61df13dc6407744a679355c3daa486cd944db",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "2_ShallowWideMLP",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "16139b630f55adbc65951190c28c2cd285c4ba8701dc0d11f2420b0fdfdd3860",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "3_DeepNarrowMLP",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7f780bbf46be92d72aca6f5ef4046896441c87ee1366228c53041deedd41f49b",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "4_LeNet5",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4742751a829e79146ffbda30dfab1519e981679a391efef609ac7f8523da0473",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "5_AlexNet",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1d57ae81cf3bba27ca3b28ca4bc25edeef577f70aa5ab31b58893c68951a32a7",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "6_GoogleNetInceptionModule",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "0dc3ebea4d88ed00f0755e550501432f9218a09bac89e7f642c6822231f2da5e",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "7_GoogleNetInceptionV1",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "620e9fdde07b75fda99aba7ef3f8b6af73fbde98ceedfe6d79df225fcbec9353",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "8_ResNetBasicBlock",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4364cc9cabbfa307c89cbf5f5e3b326f503834aa9f7e8c5aa578746c4f48d0cf",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "9_ResNet18",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "5352610d65b014e267d3e6ffd7a472b36d192408ca97d726c18b2134b07d0432",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "10_ResNet101",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7aeb9ec7f12c238c7f38040262b95ac311b16d32c5f49a56655a0b6bdfcc3387",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "11_VGG16",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "3669feb9039d7c1631babe17a6a23b8ae640b161c6c6e105b72642ce557dcfd1",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "12_VGG19",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "c05e0ee590c4dfa1d6524b8654cd17776d40fef0ea838fa23bbf4b2f0b59f7dd",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "13_DenseNet121TransitionLayer",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "d03af66d6c32b66bba37da462571da4899b97a1b328bdf35e938f8066346a18e",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "14_DenseNet121DenseBlock",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "40008cbfe400881903d7b84c22fe32a5d835288ef29a6a56fef6c52df50b79ea",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "15_DenseNet121",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "91243edf5843f2ffbf571840a15614e6a67fe77824e9ae614e9af8ab1b809017",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "16_DenseNet201",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "35b7fafac4d663a3eb6f5c528245d28fb00046dfb14c127d074ca8c8da8c5fdd",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "17_SqueezeNetFireModule",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "f3b76637599f1044ca1d3f0da7f33fbab816960ca66c07ec45b9b2b06a587ebf",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "18_SqueezeNet",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "a5e971b55a81081832cf7291693a0a880f757fdd4830ef7c7961dbb0a9a9be1b",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "19_MobileNetV1",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "4acb1db9760ae126995f09f9d93b19c892aa1a6885741a1fa72aa8b15ee9dbb1",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "22_EfficientNetB0",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "66772bc7990a7c8b35d8330af093e9680295aa255f56ffd9c289b4f258a5c560",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "23_EfficientNetB1",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "15f1307aa8b575784a617f77686595c31a8fd44b930027433eb262e071ee1c4b",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "24_EfficientNetB2",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "98f6440178ab310db4ca6a2dc03599ddc290cadc674f01587ab83f8db9cbaff0",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "25_ShuffleNetUnit",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "475b31a19a0937ef080ae4ac01dd73d28de540baf76918f93e5c60fed5740a89",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "27_RegNet",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "efd30294a133a26742ecadf5407e64f105f48c61d895dfa6516781794bb20797",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "33_VanillaRNN",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "fa0871902b133f9f869ba0dfdc62be62ff4b8686d76607edcb7625807018a16d",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "34_VanillaRNNHidden",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "dea8ed59c4e11bc5054fe9a78704e3e47b07b3d2af5612209fffff2ae75804ae",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "35_LTSM",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "55741c227500a9b2e1fd6caa5606482473cc0431462926012c5d162416bf43c5",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "36_LTSMHn",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "89da65ddc7934eb4df002561e8ba4635d1d3672a1d1d353bb8a5c5449f9cb012",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "37_LTSMCn",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1dd7100b3f75b6ddc4f4b9b50761604816c7812a6d803f0e7db5e7f54bcaa525",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "39_GRU",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "5dec74a58d5ca4d832e6deaf026ae2eb0bb4ca537ba6b3cdd1b8204201a3fa95",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "40_GRUHidden",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "6b9c4200a0aae16df1813490f2d316df85f4a0f477144829db7dcf78b689d536",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "41_GRUBirectional",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "dfa76d143b52f5183d7bfb338430dc5afd9a1ecfd8585f414d345d829af66e0d",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "42_GRUBidirectionalHidden",
+   "flagged": false,
+   "stateful": false,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "48d437d36ea80caea79461babb987b9ca860f940751226373564c3765e548f72",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "43_MinGPTCausalAttention",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "57447ccfe2dcdf2b175df21701f3796ffe94f70fa614a270587cf5432a1d7644",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "44_MiniGPTBlock",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "62ec78618c956c5f4f00e1b42b0e2ca4911e2c1d6bb51d18990c6076ea1847e6",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "45_UNetSoftmax",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "ba1962c93f05e8c5aa81d47c70246098351f75b02ae0388c793fed589cbb12b9",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "46_NetVladWithGhostClusters",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "7daa2ae731bc9b92b7109be30f1f65301af1f254a31cdc7e31277af36a46953d",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "47_NetVladNoGhostClusters",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "227095dbfb76811ca8c23925ecce1227ef85ec799435a7dd9ba5ac82ba6141af",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "49_Mamba2ReturnFinalState",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "1bcfb35f92a0c847d6e95fc9dbbdd3b4536914aaf72501c909f9c0f0a239b7ce",
+   "source": "k1_pytorch_code_module",
+   "level": 3,
+   "op_name": "50_ReLUSelfAttention",
+   "flagged": false,
+   "stateful": true,
+   "findings": [],
+   "note": "reused K1 unique-ref measurement; source text not stored in K1 dump"
+  },
+  {
+   "hash": "333bf992fd77297a4c43f4287b44662dcc43c8036be69d486b28e7a9db7bffd5",
+   "source": "refs/40_Matmul_Scaling_ResidualAdd.py",
+   "flagged": false,
+   "stateful": true,
+   "findings": []
+  },
+  {
+   "hash": "9d280c98c015edca0e7e521594380f9def43fdea7bbd95f5f71ff83689632900",
+   "source": "refs/43_MinGPTCausalAttention.py",
+   "flagged": false,
+   "stateful": true,
+   "findings": []
+  },
+  {
+   "hash": "e73093b5d6648474f161cc62c60f121a1468cdacb855cd5ae5ed3056a12ac58e",
+   "source": "refs/44_MiniGPTBlock.py",
+   "flagged": false,
+   "stateful": true,
+   "findings": []
+  },
+  {
+   "hash": "ef3a425677ff103d6080f3f3eddf89cee25f5b54cfa13777de51bc0ab39b41e6",
+   "source": "refs/55_Matmul_MaxPool_Sum_Scale.py",
+   "flagged": false,
+   "stateful": true,
+   "findings": []
+  },
+  {
+   "hash": "5c2d1c40a5ba00505f8c18579b377052c92ecce39bb3c405dba42ee05a1d7740",
+   "source": "refs/73_Conv2d_BatchNorm_Scaling.py",
+   "flagged": false,
+   "stateful": true,
+   "findings": []
+  },
+  {
+   "hash": "8e5df29ff246f69cde03ab21ab53c706d58cd082014184641332cbb157607eb7",
+   "source": "refs/98_Matmul_AvgPool_GELU_Scale_Max.py",
+   "flagged": false,
+   "stateful": true,
+   "findings": []
+  },
+  {
+   "hash": "06a133f60f0d704b70014b210031e3937d7a183c90ea11800357ce6b55c89c18",
+   "source": "refs/9_Tall_skinny_matrix_multiplication_.py",
+   "flagged": false,
+   "stateful": false,
+   "findings": []
+  }
+ ]
+}
