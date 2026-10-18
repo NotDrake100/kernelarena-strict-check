@@ -59,7 +59,7 @@ def main():
     try:
         import pyarrow.parquet as pq
     except ImportError:
-        os.system(f"{sys.executable} -m pip install -q pyarrow")
+        os.system(f"{sys.executable} -m pip install -q 'pyarrow==15.0.2'")
         import pyarrow.parquet as pq
 
     freeze = _git_head(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
