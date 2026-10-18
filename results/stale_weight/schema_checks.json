@@ -1,0 +1,12 @@
+{
+  "note": "Post-scan measurements of CUDA_Code shape among Correct==True rows. Not used to retune the detector.",
+  "n_correct": 16459,
+  "ast_parse_fail": 16459,
+  "looks_cuda_global_or_torch_tensor": 16323,
+  "has_class_and_Module_strings": 1,
+  "constant_memory_weightlike_name": 416,
+  "static_tensor_or_ptr": 76,
+  "data_ptr_and_cached_or_last_ptr_word": 107,
+  "spot_check_static": "C++ internal-linkage functions (static at::Tensor foo(...)), not static local weight caches",
+  "spot_check_cached_word": "comments about __ldg / shared-memory / intermediate values, not pointer-keyed caches"
+}

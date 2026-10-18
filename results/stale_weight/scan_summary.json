@@ -1,0 +1,47 @@
+{
+ "dataset": "SakanaAI/AI-CUDA-Engineer-Archive",
+ "schema_note": "Real schema uses Correct (bool), CUDA_Code, PyTorch_Code_Module; three splits level_1/2/3. No 'correct==True' lowercase field.",
+ "detector_freeze_commit": "f560e15571c1c49a47d177e4bd7a32c0540da28a",
+ "seconds": 19.138181447982788,
+ "n_scanned": 30615,
+ "n_correct": 16459,
+ "n_correct_flagged": 0,
+ "prevalence_correct": 0.0,
+ "n_stateful_correct": 0,
+ "n_functional_correct": 16459,
+ "n_stateful_flagged": 0,
+ "prevalence_stateful": null,
+ "n_cuda_syntax_error_unflagged": 28227,
+ "per_level": {
+  "1": {
+   "scanned": 12157,
+   "correct": 7222,
+   "correct_flagged": 0,
+   "stateful": 0,
+   "functional": 7222,
+   "stateful_flagged": 0
+  },
+  "2": {
+   "scanned": 12938,
+   "correct": 6988,
+   "correct_flagged": 0,
+   "stateful": 0,
+   "functional": 6988,
+   "stateful_flagged": 0
+  },
+  "3": {
+   "scanned": 5520,
+   "correct": 2249,
+   "correct_flagged": 0,
+   "stateful": 0,
+   "functional": 2249,
+   "stateful_flagged": 0
+  }
+ },
+ "control": {
+  "n_unique_pytorch_module_refs": 229,
+  "n_flagged": 0,
+  "rate": 0.0,
+  "flagged_refs": []
+ }
+}
