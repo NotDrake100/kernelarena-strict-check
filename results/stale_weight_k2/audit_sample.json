@@ -1,0 +1,10 @@
+{
+ "seed": 0,
+ "n_flagged": 0,
+ "n_sampled": 0,
+ "sample_rule": "all_flagged",
+ "n_yes": null,
+ "precision": null,
+ "verdicts": [],
+ "note": "No flagged kernels to audit; precision is undefined (not a < 80% fail)."
+}

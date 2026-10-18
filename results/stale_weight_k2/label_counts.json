@@ -1,0 +1,71 @@
+{
+ "n": 49599,
+ "correct_true": 8157,
+ "correct_false": 41442,
+ "correct_other": 0,
+ "empty_kernel": 1983,
+ "by_split": {
+  "baseline_eval": {
+   "false": 1195,
+   "n": 1724,
+   "correct": 529
+  },
+  "repeated_sampling": {
+   "false": 40247,
+   "n": 47875,
+   "correct": 7628
+  }
+ },
+ "by_level": {
+  "2": {
+   "n": 19290,
+   "correct": 669
+  },
+  "1": {
+   "correct": 6314,
+   "n": 20081
+  },
+  "3": {
+   "n": 10228,
+   "correct": 1174
+  }
+ },
+ "by_model": {
+  "Meta-Llama-3.1-405B-Instruct": {
+   "n": 250,
+   "correct": 42
+  },
+  "gpt-4o-2024-08-06": {
+   "n": 247,
+   "correct": 55
+  },
+  "o1-2024-12-17": {
+   "correct": 139,
+   "n": 239
+  },
+  "deepseek-chat": {
+   "n": 24583,
+   "correct": 5695
+  },
+  "claude-3-5-sonnet-20241022": {
+   "n": 246,
+   "correct": 69
+  },
+  "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo": {
+   "n": 249,
+   "correct": 27
+  },
+  "deepseek-reasoner": {
+   "correct": 133,
+   "n": 246
+  },
+  "meta-llama/Llama-3.1-70B-Instruct": {
+   "n": 18612,
+   "correct": 1965
+  },
+  "llama-3.1-70b": {
+   "n": 4927,
+   "correct": 32
+  }
+ }
+}

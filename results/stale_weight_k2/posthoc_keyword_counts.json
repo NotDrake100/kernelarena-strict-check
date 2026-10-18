@@ -1,0 +1,9 @@
+{
+ "n_correct_stateful": 1684,
+ "keyword_hits": {
+  "data_ptr": 1682,
+  "id(": 125,
+  "register_buffer": 84
+ },
+ "note": "token counts after scan; not used to retune"
+}

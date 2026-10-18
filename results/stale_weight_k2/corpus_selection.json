@@ -1,0 +1,102 @@
+{
+  "prereg": "PREREG_stale_weight_k2.md",
+  "selection_inputs": "dataset cards, READMEs, published schemas, and row/label counts only; no detector run and no solution-body read to choose",
+  "chosen": "ScalingIntelligence/kernelbench-samples",
+  "why": "Eligible public LLM-generated KernelBench ModelNew corpus with a per-kernel `correct` boolean and Python `kernel` source. Largest proxy count of correct-labelled Python module rows among eligible hits (8157).",
+  "proxy_rule": "correct == true on kernel.json rows whose solution field is Python ModelNew / kernel source",
+  "candidates": [
+    {
+      "id": "ScalingIntelligence/kernelbench-samples",
+      "eligible": true,
+      "proxy_correct": 8157,
+      "n_labelled_rows": 49599,
+      "reason": "Public HF dataset; LLM-generated KernelBench experiment samples; kernel.json schema keys include correct, kernel, eval_result; kernel is Python source (card + schema)."
+    },
+    {
+      "id": "Infatoshi/kernelbench-v3-runs",
+      "eligible": true,
+      "proxy_correct": 927,
+      "n_labelled_rows": 2071,
+      "reason": "Public; LLM agents; results.csv has correct bool; 927 correct rows with solution_link to Python solution.py."
+    },
+    {
+      "id": "wafer-ai/wafer-data kernel-arena/exports/kernelbench-hip-mi300x",
+      "eligible": true,
+      "proxy_correct": 417,
+      "n_labelled_rows": 451,
+      "reason": "Public GitHub; LLM-generated kernel.py ModelNew; index.json passed bool. Named candidate in this repo. Smaller than samples."
+    },
+    {
+      "id": "Infatoshi/kernelbench-hard-submissions",
+      "eligible": true,
+      "proxy_correct": null,
+      "n_labelled_rows": 53,
+      "reason": "Public; LLM agents; correct bool + solution field; n=53 so proxy at most 53."
+    },
+    {
+      "id": "SakanaAI/AI-CUDA-Engineer-Archive",
+      "eligible": false,
+      "reason": "K1 schema/result: CUDA_Code is C++ forward(x, weight, ...); not Python nn.Module solution source."
+    },
+    {
+      "id": "ScalingIntelligence/KernelBench",
+      "eligible": false,
+      "reason": "Benchmark problems / PyTorch references, not LLM-generated solutions with correctness labels."
+    },
+    {
+      "id": "Elfsong/KernelBench-M",
+      "eligible": false,
+      "reason": "Card: mutation operators on verified CUDA substrates, not an LLM-generated labelled solution corpus."
+    },
+    {
+      "id": "Infatoshi/kernelbench-hard-traces",
+      "eligible": false,
+      "reason": "Agent traces (messages/tools); no per-kernel correct + Python module solution field."
+    },
+    {
+      "id": "Infatoshi/kernelbench-mega-traces",
+      "eligible": false,
+      "reason": "Agent traces; n=137; no per-kernel correctness+solution schema."
+    },
+    {
+      "id": "Infatoshi/kernelbench-cuda-traces",
+      "eligible": false,
+      "reason": "Agent traces; n=155."
+    },
+    {
+      "id": "Infatoshi/kernelbench-v3-problems",
+      "eligible": false,
+      "reason": "Problem definitions, not generated solutions."
+    },
+    {
+      "id": "justus27/kernelbench-genesys",
+      "eligible": false,
+      "reason": "Prompts / verification_info; no generated kernel + correctness label."
+    },
+    {
+      "id": "dtadpole/kernel-bench",
+      "eligible": false,
+      "reason": "reference_code only; no LLM solution or correctness label."
+    },
+    {
+      "id": "andrew-wang/kernelbench_harness_expansion",
+      "eligible": false,
+      "reason": "original_code/code/original_idx; card/schema has no correctness label and does not state LLM-generated labelled solutions."
+    },
+    {
+      "id": "jiliu1/kernelbench_hip",
+      "eligible": false,
+      "reason": "No card; schema is pyc binary / webdataset keys; no correctness label."
+    },
+    {
+      "id": "BonnieWang/KernelBenchX",
+      "eligible": false,
+      "reason": "tasks are benchmark specs; corpus_all is 110 before/after refinements with speedups, not a per-kernel correctness-labelled ModelNew corpus of >=200."
+    },
+    {
+      "id": "this repo 16 KernelArena gate entries",
+      "eligible": false,
+      "reason": "Validation set; excluded by prereg."
+    }
+  ]
+}

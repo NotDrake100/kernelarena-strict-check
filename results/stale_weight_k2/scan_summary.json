@@ -1,0 +1,132 @@
+{
+ "dataset": "ScalingIntelligence/kernelbench-samples",
+ "detector_freeze_commit": "f560e15571c1c49a47d177e4bd7a32c0540da28a",
+ "freeze_check": {
+  "freeze_commit": "f560e15571c1c49a47d177e4bd7a32c0540da28a",
+  "working_sha256": "ba5abbdda608f99db3d30abcc714a36eef376a3f9116d81ababedf8f60aa8ec0",
+  "freeze_sha256": "ba5abbdda608f99db3d30abcc714a36eef376a3f9116d81ababedf8f60aa8ec0",
+  "diff_empty": true,
+  "identical": true
+ },
+ "seconds": 63.748096227645874,
+ "n_scanned": 49599,
+ "n_correct": 8157,
+ "n_correct_stateful": 1684,
+ "n_correct_functional": 6473,
+ "n_detector_stateful_correct": 1684,
+ "n_empty_correct": 0,
+ "n_parse_error_correct": 0,
+ "n_flagged_correct_any": 0,
+ "n_flagged_correct_stateful": 0,
+ "prevalence_correct_stateful": 0.0,
+ "per_split": {
+  "baseline_eval": {
+   "scanned": 1724,
+   "correct": 529,
+   "correct_stateful": 223,
+   "correct_functional": 306,
+   "correct_stateful_flagged": 0
+  },
+  "repeated_sampling": {
+   "scanned": 47875,
+   "correct": 7628,
+   "correct_stateful": 1461,
+   "correct_functional": 6167,
+   "correct_stateful_flagged": 0
+  }
+ },
+ "per_level": {
+  "1": {
+   "scanned": 20081,
+   "correct": 6314,
+   "correct_stateful": 124,
+   "correct_functional": 6190,
+   "correct_stateful_flagged": 0
+  },
+  "2": {
+   "scanned": 19290,
+   "correct": 669,
+   "correct_stateful": 666,
+   "correct_functional": 3,
+   "correct_stateful_flagged": 0
+  },
+  "3": {
+   "scanned": 10228,
+   "correct": 1174,
+   "correct_stateful": 894,
+   "correct_functional": 280,
+   "correct_stateful_flagged": 0
+  }
+ },
+ "per_model": {
+  "claude-3-5-sonnet-20241022": {
+   "scanned": 246,
+   "correct": 69,
+   "correct_stateful": 19,
+   "correct_functional": 50,
+   "correct_stateful_flagged": 0
+  },
+  "deepseek-reasoner": {
+   "scanned": 246,
+   "correct": 133,
+   "correct_stateful": 83,
+   "correct_functional": 50,
+   "correct_stateful_flagged": 0
+  },
+  "deepseek-chat": {
+   "scanned": 24583,
+   "correct": 5695,
+   "correct_stateful": 1352,
+   "correct_functional": 4343,
+   "correct_stateful_flagged": 0
+  },
+  "gpt-4o-2024-08-06": {
+   "scanned": 247,
+   "correct": 55,
+   "correct_stateful": 16,
+   "correct_functional": 39,
+   "correct_stateful_flagged": 0
+  },
+  "Meta-Llama-3.1-405B-Instruct": {
+   "scanned": 250,
+   "correct": 42,
+   "correct_stateful": 4,
+   "correct_functional": 38,
+   "correct_stateful_flagged": 0
+  },
+  "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo": {
+   "scanned": 249,
+   "correct": 27,
+   "correct_stateful": 0,
+   "correct_functional": 27,
+   "correct_stateful_flagged": 0
+  },
+  "o1-2024-12-17": {
+   "scanned": 239,
+   "correct": 139,
+   "correct_stateful": 85,
+   "correct_functional": 54,
+   "correct_stateful_flagged": 0
+  },
+  "meta-llama/Llama-3.1-70B-Instruct": {
+   "scanned": 18612,
+   "correct": 1965,
+   "correct_stateful": 105,
+   "correct_functional": 1860,
+   "correct_stateful_flagged": 0
+  },
+  "unknown": {
+   "scanned": 4927,
+   "correct": 32,
+   "correct_stateful": 20,
+   "correct_functional": 12,
+   "correct_stateful_flagged": 0
+  }
+ },
+ "control": {
+  "n_unique_refs": 236,
+  "n_flagged": 0,
+  "rate": 0.0,
+  "rule": "corpus has no reference-model field; control = unique K1 PyTorch_Code_Module hashes plus this repo refs/ re-detected"
+ }
+}
